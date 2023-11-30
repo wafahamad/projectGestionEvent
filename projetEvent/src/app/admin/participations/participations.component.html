@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>User List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Date participation</th>
+          <th>Nombre personne</th>
+          <th>Participant</th>
+          <th>Evenement</th>
+          <th>Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let particip of participations | async">
+          <td>{{particip.idP}}</td>
+          <td>{{particip.datePar}} {{particip.prenom}}</td>
+          <td>{{particip.nbPrs}}</td>
+          <td>{{particip.Paricipatn}}</td>
+          <td>{{particip.Paricipatn}}</td>
+          <td>
+            <!-- <button (click)="deleteParticipation(participation.idP)" class="btn btn-danger" 
+                   style="margin-left: 10px">Supprimer</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

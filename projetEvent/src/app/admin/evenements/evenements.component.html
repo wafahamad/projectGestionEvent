@@ -1,0 +1,44 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>List Events</h2>
+  </div>
+  <div class="panel-body">
+    <button class="btn btn-success" (click)="addNewEvent()">Add Event</button>
+    <table class="table table-striped" style="margin-top: 10px;">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nom evenement</th>
+          <th>Date</th>
+          <th>Image</th>
+          <th>Nombre participants</th>
+          <th>Nombre places</th>
+          <th>Disponibilité</th>
+          <th>Description</th>
+          <th>Modifier</th>
+          <th>Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of events | async">
+          <td>{{event.idE}}</td>
+          <td>{{event.nom}}</td>
+          <td>{{event.img}}</td>
+          <td>{{event.date}}</td>
+          <td>{{event.nbrPart}}</td>
+          <td>{{event.nbrPlace}}</td>
+          <td>{{event.disponible}}</td>
+          <td>{{event.description}}</td>
+          <td>
+            <button (click)="updateEvent(event.idE)" class="btn btn-primary"
+                   style="margin-left: 10px">Update</button>
+          </td>
+          <td>
+            <button (click)="deleteEvent(event.idE)" class="btn btn-danger"
+                   style="margin-left: 10px">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "particpants": [
+    {
+      "id": "2",
+      "e_mail": "hamraoui@gmail.com",
+      "pwd": "1234",
+      "nom": "hamraoui",
+      "cin": 1254369,
+      "age": 21,
+      "prenom": "eya"
+    }
+  ]
+}

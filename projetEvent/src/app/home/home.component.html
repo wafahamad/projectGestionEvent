@@ -1,0 +1,47 @@
+<section id="hero">
+  <div class="hero-container">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(../../assets/backhome.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content">
+              <h2 style="font-size: 100px;" class="animate__animated animate__fadeInDown"><span>Event</span>.com</h2>
+              <div>
+                <p class="btn-menu animate__animated animate__fadeInUp scrollto">Our Events</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+<div class="container" >
+  <ul class="row justify-content-center align-items-center" style="list-style: none;">
+    <li *ngFor="let a of events" class="col-sm">
+      <div class="flip-card" style="width: 18rem;">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="card-title">{{a.nom}}</p>
+      
+            </div>
+            <div class="flip-card-back">
+              <img [src]="a.img" style=" border-radius: 10px; width: 200px; height: 200px; margin-left: 43px;
+              margin-bottom: 20px;">
+                <a (click)="getMoreInfo(a,a._id)"  class="tm-page-link">See More</a>
+      
+            </div>
+        </div>
+      </div>
+      
+    </li>
+
+  </ul>
+</div>
+<app-footer></app-footer>
+

@@ -1,0 +1,20 @@
+
+<div class="container" >
+<div class="flip-card" style="width: 18rem;">
+  <div class="flip-card-inner">
+      <div class="flip-card-front">
+          <p class="card-title">{{event.nom}}</p>
+             <p>{{event.date}}</p>
+    
+      
+        <img [src]="event.img" style=" border-radius: 10px; width: 200px; height: 200px; margin-left: 43px;
+        margin-bottom: 20px;">
+        <a (click)="getMoreInfo(event._id)" rel="nofollow" target="_parent" class="btn btn-secondary">Participe Now</a>
+
+          <a  [routerLink]="['/dashboard/home']"class="tm-page-link">retour</a>
+
+      </div>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>

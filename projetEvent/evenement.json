@@ -1,0 +1,17 @@
+{
+    "events":[
+      {
+        "id":1,
+        "name":"Holi",
+        "date":"21/11/2023  10AM",
+        "img":"../assets/holi.jpg",
+        "disponible":true
+      },
+      {
+       "id":2,
+       "name":"Halloween",
+       "img":"../assets/halloween.jpg",
+       "disponible":false
+      }
+    ]
+}

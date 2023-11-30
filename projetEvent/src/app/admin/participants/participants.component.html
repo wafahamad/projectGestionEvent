@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>User List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nom participant</th>
+          <th>Cin</th>
+          <th>Age</th>
+          <th>Email</th>
+          <th>Mot de passe</th>
+          <th>Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let par of participants | async">
+          <td>{{par.idP}}</td>
+          <td>{{par.nom}} {{par.prenom}}</td>
+          <td>{{par.cin}}</td>
+          <td>{{par.age}}</td>
+          <td>{{par.e_mail}}</td>
+          <td>{{par.pwd}}</td>
+          <td>
+           <!-- <button (click)="deleteParticipant(participant.idP)" class="btn btn-danger"
+                   style="margin-left: 10px">Supprimer</button>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

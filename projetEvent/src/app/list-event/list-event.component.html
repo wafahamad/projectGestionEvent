@@ -1,0 +1,71 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2> Liste Participations</h2>
+  </div>
+  <br><br>
+  <button type="button" class="btn btn-dark" (click)="changeForm()">Ajouter evenement</button>
+  <form [formGroup]="evnForm" class="bordure" [hidden]="hideForm" (ngSubmit)="AddEvent()">
+    <label> Id:</label>
+    <input type="number" class="form-control" formControlName="idE">
+      <label> Nom:</label>
+      <input type="text" class="form-control" formControlName="nom">
+      <label>Date:</label>
+      <input type="date" class="form-control" formControlName="date">
+      <label>Image:</label>
+      <input type="text" class="form-control" formControlName="img">
+      <label>Nombre participants:</label>
+      <input type="number" class="form-control" formControlName="nbrPart">
+      <label>Nombre places:</label>
+      <input type="number" class="form-control" formControlName="nbrPlace" >
+      <label>Disponibilité:</label>
+      <div>
+        <label><input type="radio" formControlName="disponible" value="true"> Disponible</label>
+        <label><input type="radio" formControlName="disponible" value="false"> Non Disponible</label>
+      </div>
+      <label>Description:</label>
+      <input type="text" class="form-control" formControlName="description" >
+      <br>
+      <br>
+      <button class="btn btn-dark"> Ajouter</button>
+      <input type="reset" class="btn btn-secondary" value="Effacer" />
+      </form>
+      <br><br><br><br>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nom evenement</th>
+          <th>Date evenement</th>
+          
+          <th>Nombre participants</th>
+          <th>Nombre place</th>
+          <th>Disponibilité</th>
+          <th>Description</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of events ">
+          <td>{{event.idE}}</td>
+          <td>{{event.nom}}</td>
+          <td>{{event.date}} </td>
+          
+          <td>{{event.nbrPart}}</td>
+          <td>{{event.nbrPlace}}</td>
+          <td>{{event.disponible}}</td>
+          <td>{{event.description}}</td>
+          <td> <input type="button" value="Modifier" class="btn btn-dark" (click)="ChangeEvent(event)" >
+            <input type="button" value="Enregistrer modification" class="btn btn-primary" (click)="UpdateEvent(event)" >
+          <td>
+             <button (click)="deleteEvent(event.idE)" class="btn btn-danger"
+                   style="margin-left: 10px">Supprimer</button>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

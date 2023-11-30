@@ -1,0 +1,44 @@
+<body>
+    <div style="margin-top: 200px;">
+
+    <div class="container mt-5 mb-5 d-flex justify-content-center align-items-center" >
+
+
+
+        <div class="card layout">
+            <div class="inner-card layoutInner" > <img src="https://www.efficy.com/wp-content/uploads/2019/03/online-survey.png" class="img-fluid rounded" style="width: 500px; height: 300px; margin-top: 20px; margin-right: 50px; margin-left: 50px;">
+
+                <div>
+                    <form [formGroup]="ParForm" (ngSubmit)="getParticiper()">
+                        <br>
+                        <div class="form-outline mb-4">
+                          <input type="date" id="form2Example17" class="form-control form-control-lg" formControlName='datePar'/>
+                          <label class="form-label" for="form2Example17">Choisissez la date</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input type="number" id="form2Example17" class="form-control form-control-lg" formControlName='nbPrs'/>
+                            <label class="form-label" for="form2Example17">Le nombre de personnes</label>
+                      </div>
+
+
+
+
+                       <!--<label> participant's identifier</label><select formControlName="participant">
+                          <option *ngFor="let p of CurrentParticipant" [ngValue]="p">{{ p.idP }}</option>
+                        </select>--> 
+                      <div class="px-2 mt-3">
+                        <button [disabled]="ParForm.invalid" class="btn btn-primary px-3">participer Now</button>
+                        <button class="btn btn-outline-primary px-3" (click)="goback()">Back</button>
+
+                      </div>
+                    </form>
+                    <button class="btn-warning" (click)="onVider()">Reset</button>
+
+                   </div></div>
+                    </div>
+
+                  </div>
+                  </div>
+                  <div >
+                  </div>
+        </body>
